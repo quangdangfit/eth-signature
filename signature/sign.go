@@ -35,8 +35,7 @@ func Sign(pk string, types []string, values []interface{}) (string, error) {
 }
 
 func SignHash(data []byte) []byte {
-	msg := fmt.Sprintf("\x19Ethereum Signed Message:\n320x1509a0b6ef85656baa0323be65eea9f49c3d373c6abc32f4514cb605d51917ec")
-	fmt.Println(crypto.Keccak256([]byte(msg)))
+	msg := fmt.Sprintf("\x19Ethereum Signed Message:\n%d%s", len(data), data)
 	return crypto.Keccak256([]byte(msg))
 }
 
