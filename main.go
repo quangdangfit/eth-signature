@@ -9,13 +9,13 @@ import (
 func main() {
 	types := []string{"address", "address", "uint256", "bytes32", "uint256"}
 	values := []interface{}{
-		"0x4a047bccee30a27247f6429bd8ade94b932bbf69",
+		"0x15f50afaf1ebc1679e7767c548c65a6c9c333ad2",
 		"0x0631aa71dC522EfF8d13b00cc5dA8221567A01cA",
-		"100000000000000000000",
-		"0x4341af530580a883c6741c72cb8c03bd30949ca6d11d8e5ef4d152c2fd0cae44",
-		"1675029590",
+		"260963194988253700",
+		"0x4726621f6668ebf199e4618250ac76410117f3e42aa0ad6c6e98d833fd402b04",
+		"1665075116",
 	}
-	pk := "0xafdfdba96e737cd62cbd2e509035bd293759b2da070226656a289e85c70482bc"
+	pk := "pk"
 
 	sign, err := signature.Sign(pk, types, values)
 	if err != nil {
